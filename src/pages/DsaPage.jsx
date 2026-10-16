@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import DataContext from "../context/DataContext";
 
 const DsaPage = () => {
-  const { questions,updateQuestionStatus } = useContext(DataContext);
+  const { questions,updateQuestionStatus, deleteQuestion } = useContext(DataContext);
 
   const [Search, setSearch] = useState("");
   const [Difficulty, setDifficulty] = useState("All");
@@ -188,7 +188,20 @@ const DsaPage = () => {
                   <h2 className="mt-6 break-words text-lg font-semibold leading-7 text-zinc-100 transition group-hover:text-lime-200 sm:text-xl">
                     {val.title}
                   </h2>
+                       <button
+                       type="button"
+                       onClick={() => {
+                         const confirmed = window.confirm(
+                           "Are you sure you want to delete this question?"
+                         );                     
 
+                         if (confirmed) {
+                           deleteQuestion(val.id);
+                         }
+                       }}
+                       className="mt-3 rounded-lg border border-red-400/20 bg-red-400/10 px-3 py-2 text-xs font-semibold text-red-400 transition hover:bg-red-400/20">
+                       Delete
+                     </button>
                   {/* Status Badge */}
                   <div className="mt-5">
                     <span

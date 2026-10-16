@@ -14,6 +14,11 @@ export const DataProvider = ({ children }) => {
 
     setquestions((prev) => [...prev, newQuestion]);
     };
+       const deleteQuestion = (id) => {
+     setquestions((prev) =>
+    prev.filter((q) => q.id !== id)
+    );  
+        };
     
     useEffect(() => {
     localStorage.setItem("saved-questions", JSON.stringify(questions));
@@ -55,8 +60,9 @@ export const DataProvider = ({ children }) => {
        );
        };
 
+ 
   return (
-    <DataContext.Provider value={{questions,setquestions,addQuestions,gitHubQuestions,technicalQuestion,dsaQuestions,totalDsaQuestions,totalGitHubQuestions,totalTechnicalQuestion,updateQuestionStatus}}>
+    <DataContext.Provider value={{questions,setquestions,addQuestions,gitHubQuestions,technicalQuestion,dsaQuestions,totalDsaQuestions,totalGitHubQuestions,totalTechnicalQuestion,updateQuestionStatus,deleteQuestion}}>
       {children}
     </DataContext.Provider>
   );
