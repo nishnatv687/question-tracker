@@ -1,12 +1,98 @@
-# React + Vite
+# PrepTrack — Interview Practice Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React application to organize interview preparation and track progress across DSA, Technical, and Git & GitHub questions.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dashboard:** View total questions and category-wise completion counts.
+- **Add Questions:** Add questions with a title, category, difficulty, and status.
+- **Category Pages:** Organize questions into DSA, Technical, and Git & GitHub sections.
+- **Search:** Find questions by title.
+- **Difficulty Filter:** Filter questions by Easy, Medium, or Hard.
+- **Status Filter:** Filter questions by Pending, In Progress, or Completed.
+- **Progress Tracking:** View completed questions compared with total questions.
+- **Persistent Storage:** Save questions using browser LocalStorage.
+- **Responsive UI:** Designed for mobile, tablet, and desktop screens.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- React Router
+- Tailwind CSS
+- React Hook Form
+- Context API
+- JavaScript
+- Lucide React
+- LocalStorage
+
+## 📂 Project Structure
+
+```text
+src/
+├── components/
+│   └── NavBar.jsx
+├── context/
+│   └── DataContext.jsx
+├── layout/
+│   └── MainLayout.jsx
+├── pages/
+│   ├── AddQuestion.jsx
+│   ├── Dashboard.jsx
+│   ├── DsaPage.jsx
+│   ├── TechnicalPage.jsx
+│   └── GitGitHub.jsx
+├── routes/
+│   └── AppRoutes.jsx
+├── App.jsx
+├── index.css
+└── main.jsx
+```
+
+## ⚙️ Getting Started
+
+### Prerequisites
+
+- Node.js and npm installed on your system.
+- Git installed on your system.
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/nishnatv687/question-tracker
+   ```
+
+2. Navigate to the project folder:
+
+   ```bash
+   cd Question-Tracker
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL displayed in your terminal.
+
+## 💾 Data Storage
+
+Questions are stored in browser LocalStorage, allowing the application to retain saved questions across page refreshes in the same browser.
+
+## 🌐 Links
+
+- **Live Demo:** https://question-tracker-jade.vercel.app/
+- **GitHub Repository:** https://github.com/nishnatv687/question-tracker
+
+## 👨‍💻 Author
+
+Built as a project to practice React development, state management, form handling, filtering, and interview preparation tracking.
